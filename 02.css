@@ -1,0 +1,143 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+header{
+    background-color: #395657;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 10%;
+}
+
+header .logo{
+    font-size: 1.4em;
+    color: #c3eb9b;
+}
+
+header li{
+    display: inline-block;
+    padding:  0 0 0 2em;
+}
+
+header a{
+    color: #fff;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+a:hover{
+    color: #324334;
+    transition: .4s;
+}
+
+.checkbtn{
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: #fff;
+}
+
+#check{
+    display: none;
+}
+
+header button{
+    padding: 8px 26px;
+    border: 3px solid wheat;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 7px;
+}
+/* ===================== */
+@media (max-width: 1241px){
+    header li:last-child{
+        display: none;
+    }
+}
+
+@media (max-width: 1111px){
+    header li:nth-child(4){
+        display: none;
+    }
+}
+
+@media (max-width: 920px){
+    header li:nth-child(3){
+        display: none;
+    }
+    header li:nth-child(1){
+        padding: 0 !important;
+    }
+    header a:nth-child(2){
+        padding-right: 0 !important;
+    }
+}
+/* ================================ */
+@media (max-width: 780px){
+    header li{
+        display: block !important;
+    }
+    .checkbtn{
+        display: block;
+    }
+    .logo{
+        display: none; /* optional */
+    }
+    header ul{
+        position: fixed;
+        height: 50vh;
+        background-color: #000;
+        width: 100%;
+        top: 80px;
+        left: -100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        transition: all .4s;
+           
+    }
+    header ul:hover{
+        background-color:darkblue ;
+    }
+    header li{
+        margin: 20px 0;
+        padding: 0 !important;
+    }
+    header a{
+        font-size: 20px;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    header .logo{
+        font-size: 5vw;
+        color: #c3eb9b;
+    }
+    header button{
+        padding: 2vw 3vw;
+        border: 3px solid wheat;
+        background-color: transparent;
+        color: #fff;
+        border-radius: 7px;
+    }
+    .logo{
+        order: 2;
+    }
+    nav{
+        order: 1;
+    }
+    header button{
+        order: 3;
+    }
+      
+}
